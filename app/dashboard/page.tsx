@@ -9,7 +9,10 @@ import {
 import StatCard from "@/components/dashboard/StatCard";
 import RevenueChart from "@/components/dashboard/RevenueChart";
 import JobsBarChart from "@/components/dashboard/JobsBarChart";
-import { getJobs, getStats, formatCurrency, formatDate } from "@/lib/data";
+import { getStats, formatCurrency, formatDate } from "@/lib/data";
+import { fetchJobs } from "@/lib/jobs";
+
+export const dynamic = "force-dynamic";
 
 function StatusBadge({ status }: { status: string }) {
   const map: Record<string, string> = {
@@ -29,8 +32,8 @@ function StatusBadge({ status }: { status: string }) {
   );
 }
 
-export default function DashboardPage() {
-  const jobs = getJobs();
+export default async function DashboardPage() {
+  const jobs = await fetchJobs();
   const stats = getStats(jobs);
   const recent = jobs.slice(0, 12);
 
@@ -157,6 +160,13 @@ export default function DashboardPage() {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
+              {recent.length === 0 && (
+                <tr>
+                  <td colSpan={6} className="px-5 py-12 text-center text-sm text-slate-500">
+                    No jobs yet. Run <code className="px-1 py-0.5 bg-slate-100 rounded">supabase/seed.sql</code> to load sample data, or insert your first real job.
+                  </td>
+                </tr>
+              )}
               {recent.map((j) => (
                 <tr key={j.id} className="hover:bg-slate-50">
                   <td className="px-5 py-3 text-slate-600 whitespace-nowrap">

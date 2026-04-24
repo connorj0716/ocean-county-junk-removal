@@ -13,17 +13,37 @@ const SERVICES = [
 ];
 
 export default function ContactForm() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [town, setTown] = useState("");
+  const [service, setService] = useState("");
+  const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function onSubmit(e: React.FormEvent) {
+  async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setError(null);
     setLoading(true);
-    // Simulate request
-    setTimeout(() => {
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone, email, town, service, message }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) {
+        setError(data?.error ?? "Something went wrong. Please call us at (609) 703-2115.");
+        setLoading(false);
+        return;
+      }
       setSubmitted(true);
+    } catch {
+      setError("Network error. Please call us at (609) 703-2115.");
       setLoading(false);
-    }, 600);
+    }
   }
 
   if (submitted) {
@@ -46,6 +66,8 @@ export default function ContactForm() {
           </label>
           <input
             required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             className="w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
             placeholder="Jane Smith"
           />
@@ -57,6 +79,8 @@ export default function ContactForm() {
           <input
             required
             type="tel"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
             className="w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
             placeholder="(609) 703-2115"
           />
@@ -70,6 +94,8 @@ export default function ContactForm() {
           </label>
           <input
             type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
             placeholder="you@email.com"
           />
@@ -80,6 +106,8 @@ export default function ContactForm() {
           </label>
           <input
             required
+            value={town}
+            onChange={(e) => setTown(e.target.value)}
             className="w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
             placeholder="Toms River, Manahawkin, LBI…"
           />
@@ -92,7 +120,8 @@ export default function ContactForm() {
         </label>
         <select
           required
-          defaultValue=""
+          value={service}
+          onChange={(e) => setService(e.target.value)}
           className="w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
         >
           <option value="" disabled>
@@ -110,10 +139,18 @@ export default function ContactForm() {
         </label>
         <textarea
           rows={4}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           className="w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
           placeholder="e.g. Full garage cleanout, old fridge, couch, 2 mattresses…"
         />
       </div>
+
+      {error && (
+        <div className="text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg px-3 py-2">
+          {error}
+        </div>
+      )}
 
       <button
         disabled={loading}
