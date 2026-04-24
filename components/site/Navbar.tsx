@@ -22,11 +22,11 @@ export default function Navbar() {
         </nav>
         <div className="flex items-center gap-2">
           <a
-            href="tel:+17325550199"
+            href="tel:+16097032115"
             className="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-slate-900 hover:text-brand-600"
           >
             <Phone className="h-4 w-4" />
-            (732) 555-0199
+            (609) 703-2115
           </a>
           <a
             href="#contact"

@@ -32,11 +32,11 @@ export default function Hero() {
               Get a Free Quote
             </a>
             <a
-              href="tel:+17325550199"
+              href="tel:+16097032115"
               className="inline-flex items-center gap-2 rounded-lg bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold px-6 py-3.5 text-base backdrop-blur"
             >
               <Phone className="h-4 w-4" />
-              (732) 555-0199
+              (609) 703-2115
             </a>
           </div>
 

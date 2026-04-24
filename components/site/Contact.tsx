@@ -24,8 +24,8 @@ export default function Contact() {
               <div>
                 <dt className="text-sm text-slate-500">Call or text</dt>
                 <dd className="text-lg font-semibold text-slate-900">
-                  <a href="tel:+17325550199" className="hover:text-brand-600">
-                    (732) 555-0199
+                  <a href="tel:+16097032115" className="hover:text-brand-600">
+                    (609) 703-2115
                   </a>
                 </dd>
               </div>
