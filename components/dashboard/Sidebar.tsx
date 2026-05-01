@@ -1,24 +1,22 @@
+"use client";
+
 import Link from "next/link";
-import {
-  LayoutDashboard,
-  ClipboardList,
-  Users,
-  Receipt,
-  BarChart3,
-  Settings,
-  Truck,
-} from "lucide-react";
+import { usePathname } from "next/navigation";
+import { LayoutDashboard, ClipboardList, Truck, Plus } from "lucide-react";
 
 const NAV = [
-  { href: "/dashboard", label: "Overview", icon: LayoutDashboard, active: true },
-  { href: "/dashboard", label: "Jobs", icon: ClipboardList },
-  { href: "/dashboard", label: "Customers", icon: Users },
-  { href: "/dashboard", label: "Invoices", icon: Receipt },
-  { href: "/dashboard", label: "Reports", icon: BarChart3 },
-  { href: "/dashboard", label: "Settings", icon: Settings },
+  { href: "/dashboard", label: "Overview", icon: LayoutDashboard, exact: true },
+  { href: "/dashboard/jobs", label: "Jobs", icon: ClipboardList },
 ];
 
 export default function Sidebar() {
+  const pathname = usePathname();
+
+  function isActive(item: (typeof NAV)[number]) {
+    if (item.exact) return pathname === item.href;
+    return pathname === item.href || pathname.startsWith(item.href + "/");
+  }
+
   return (
     <aside className="hidden lg:flex lg:w-64 shrink-0 bg-slate-950 text-slate-200 flex-col border-r border-slate-900">
       <div className="h-16 flex items-center gap-3 px-6 border-b border-slate-900">
@@ -33,14 +31,15 @@ export default function Sidebar() {
 
       <nav className="flex-1 py-4">
         <ul className="px-3 space-y-0.5">
-          {NAV.map((item, i) => {
+          {NAV.map((item) => {
             const Icon = item.icon;
+            const active = isActive(item);
             return (
-              <li key={i}>
+              <li key={item.href}>
                 <Link
                   href={item.href}
                   className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-colors ${
-                    item.active
+                    active
                       ? "bg-slate-800 text-white"
                       : "text-slate-400 hover:text-white hover:bg-slate-900"
                   }`}
@@ -52,6 +51,16 @@ export default function Sidebar() {
             );
           })}
         </ul>
+
+        <div className="mt-6 px-3">
+          <Link
+            href="/dashboard/jobs/new"
+            className="flex items-center justify-center gap-2 rounded-lg bg-brand-500 hover:bg-brand-400 text-white text-sm font-semibold px-3 py-2 transition-colors"
+          >
+            <Plus className="h-4 w-4" />
+            New Job
+          </Link>
+        </div>
       </nav>
 
       <div className="p-4 border-t border-slate-900 text-xs text-slate-500">

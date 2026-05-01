@@ -48,7 +48,7 @@ export default function LoginForm({ next }: { next?: string }) {
           onChange={(e) => setUsername(e.target.value)}
           required
           className="w-full rounded-lg bg-slate-950 border border-slate-700 px-3.5 py-2.5 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
-          placeholder="Connor or Casey"
+          placeholder="Username"
         />
       </div>
       <div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   DollarSign,
   ClipboardList,
@@ -5,6 +6,7 @@ import {
   Calendar,
   Award,
   Truck,
+  Plus,
 } from "lucide-react";
 import StatCard from "@/components/dashboard/StatCard";
 import RevenueChart from "@/components/dashboard/RevenueChart";
@@ -32,10 +34,20 @@ function StatusBadge({ status }: { status: string }) {
   );
 }
 
+function ChartEmpty() {
+  return (
+    <div className="flex flex-col items-center justify-center text-center text-sm text-slate-500 py-10">
+      <div className="font-medium text-slate-700">No data yet</div>
+      <div className="mt-1">Add your first job to start tracking trends.</div>
+    </div>
+  );
+}
+
 export default async function DashboardPage() {
   const jobs = await fetchJobs();
   const stats = getStats(jobs);
   const recent = jobs.slice(0, 12);
+  const hasData = stats.monthly.length > 0;
 
   return (
     <div className="space-y-6">
@@ -48,12 +60,19 @@ export default async function DashboardPage() {
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <button className="px-3.5 py-2 text-sm font-medium rounded-lg border border-slate-200 bg-white hover:bg-slate-50">
-            Export
-          </button>
-          <button className="px-3.5 py-2 text-sm font-medium rounded-lg bg-slate-900 text-white hover:bg-slate-800">
-            + New Job
-          </button>
+          <Link
+            href="/dashboard/jobs"
+            className="px-3.5 py-2 text-sm font-medium rounded-lg border border-slate-200 bg-white hover:bg-slate-50"
+          >
+            View all jobs
+          </Link>
+          <Link
+            href="/dashboard/jobs/new"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-semibold rounded-lg bg-slate-900 text-white hover:bg-slate-800"
+          >
+            <Plus className="h-4 w-4" />
+            New Job
+          </Link>
         </div>
       </div>
 
@@ -74,8 +93,12 @@ export default async function DashboardPage() {
         <StatCard
           label="Revenue This Month"
           value={formatCurrency(stats.thisMonthRevenue)}
-          sub={`vs ${formatCurrency(stats.lastMonthRevenue)} last month`}
-          trend={stats.momChange}
+          sub={
+            stats.lastMonthRevenue > 0
+              ? `vs ${formatCurrency(stats.lastMonthRevenue)} last month`
+              : "No prior month yet"
+          }
+          trend={stats.lastMonthRevenue > 0 ? stats.momChange : undefined}
           icon={<TrendingUp className="h-4 w-4" />}
         />
         <StatCard
@@ -98,7 +121,7 @@ export default async function DashboardPage() {
             </div>
             <div className="text-xs text-slate-500">Last 14 months</div>
           </div>
-          <RevenueChart data={stats.monthly} />
+          {hasData ? <RevenueChart data={stats.monthly} /> : <ChartEmpty />}
         </div>
 
         <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
@@ -108,7 +131,7 @@ export default async function DashboardPage() {
             </div>
             <div className="text-lg font-semibold">Volume</div>
           </div>
-          <JobsBarChart data={stats.monthly} />
+          {hasData ? <JobsBarChart data={stats.monthly} /> : <ChartEmpty />}
         </div>
       </div>
 
@@ -122,8 +145,12 @@ export default async function DashboardPage() {
         />
         <StatCard
           label="Best Month"
-          value={stats.bestMonth.month}
-          sub={`${formatCurrency(stats.bestMonth.revenue)} in revenue`}
+          value={stats.bestMonth.revenue > 0 ? stats.bestMonth.month : "—"}
+          sub={
+            stats.bestMonth.revenue > 0
+              ? `${formatCurrency(stats.bestMonth.revenue)} in revenue`
+              : "Awaiting first month of data"
+          }
           icon={<Award className="h-4 w-4" />}
         />
         <StatCard
@@ -140,12 +167,15 @@ export default async function DashboardPage() {
           <div>
             <div className="text-lg font-semibold">Recent jobs</div>
             <div className="text-sm text-slate-500">
-              Latest pickups across Toms River, Manahawkin, Brick, Lacey, Stafford &amp; LBI.
+              Latest pickups across Ocean County, NJ.
             </div>
           </div>
-          <button className="text-sm font-medium text-brand-600 hover:text-brand-700">
+          <Link
+            href="/dashboard/jobs"
+            className="text-sm font-medium text-brand-600 hover:text-brand-700"
+          >
             View all
-          </button>
+          </Link>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
@@ -162,8 +192,18 @@ export default async function DashboardPage() {
             <tbody className="divide-y divide-slate-100">
               {recent.length === 0 && (
                 <tr>
-                  <td colSpan={6} className="px-5 py-12 text-center text-sm text-slate-500">
-                    No jobs yet. Run <code className="px-1 py-0.5 bg-slate-100 rounded">supabase/seed.sql</code> to load sample data, or insert your first real job.
+                  <td colSpan={6} className="px-5 py-16 text-center">
+                    <div className="text-slate-700 font-medium">No jobs yet</div>
+                    <div className="text-sm text-slate-500 mt-1">
+                      Add your first job and the dashboard fills in automatically.
+                    </div>
+                    <Link
+                      href="/dashboard/jobs/new"
+                      className="mt-4 inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg bg-brand-500 hover:bg-brand-400 text-white shadow"
+                    >
+                      <Plus className="h-4 w-4" />
+                      Add your first job
+                    </Link>
                   </td>
                 </tr>
               )}

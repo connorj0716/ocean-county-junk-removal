@@ -1,10 +1,20 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { Search, Bell, LogOut } from "lucide-react";
+
+function crumbFromPath(pathname: string): string {
+  if (pathname === "/dashboard") return "Overview";
+  if (pathname === "/dashboard/jobs") return "Jobs";
+  if (pathname === "/dashboard/jobs/new") return "Jobs / New";
+  if (/^\/dashboard\/jobs\/[^/]+\/edit$/.test(pathname)) return "Jobs / Edit";
+  return "Overview";
+}
 
 export default function Topbar({ user }: { user: string }) {
   const router = useRouter();
+  const pathname = usePathname();
+  const crumb = crumbFromPath(pathname);
 
   async function logout() {
     await fetch("/api/auth/logout", { method: "POST" });
@@ -17,7 +27,7 @@ export default function Topbar({ user }: { user: string }) {
       <div className="flex items-center gap-3 text-sm text-slate-500">
         <span className="font-medium text-slate-700">Dashboard</span>
         <span>/</span>
-        <span>Overview</span>
+        <span>{crumb}</span>
       </div>
       <div className="flex items-center gap-3">
         <div className="hidden md:flex items-center gap-2 bg-slate-100 border border-slate-200 rounded-lg px-3 py-1.5 text-sm text-slate-500 w-72">
