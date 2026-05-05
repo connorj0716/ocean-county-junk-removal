@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, ClipboardList, Truck, Plus } from "lucide-react";
+import { LayoutDashboard, ClipboardList, FileText, Truck, Plus } from "lucide-react";
 
 const NAV = [
   { href: "/dashboard", label: "Overview", icon: LayoutDashboard, exact: true },
   { href: "/dashboard/jobs", label: "Jobs", icon: ClipboardList },
+  { href: "/dashboard/estimates", label: "Estimates", icon: FileText },
 ];
 
 export default function Sidebar() {

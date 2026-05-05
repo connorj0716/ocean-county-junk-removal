@@ -8,6 +8,11 @@ function crumbFromPath(pathname: string): string {
   if (pathname === "/dashboard/jobs") return "Jobs";
   if (pathname === "/dashboard/jobs/new") return "Jobs / New";
   if (/^\/dashboard\/jobs\/[^/]+\/edit$/.test(pathname)) return "Jobs / Edit";
+  if (pathname === "/dashboard/estimates") return "Estimates";
+  if (pathname === "/dashboard/estimates/new") return "Estimates / New";
+  if (/^\/dashboard\/estimates\/[^/]+\/edit$/.test(pathname)) return "Estimates / Edit";
+  if (/^\/dashboard\/estimates\/[^/]+\/print$/.test(pathname)) return "Estimates / Print";
+  if (/^\/dashboard\/estimates\/[^/]+$/.test(pathname)) return "Estimates";
   return "Overview";
 }
 

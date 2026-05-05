@@ -1,8 +1,7 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { AUTH_COOKIE, readSessionUser } from "@/lib/auth";
-import Sidebar from "@/components/dashboard/Sidebar";
-import Topbar from "@/components/dashboard/Topbar";
+import DashboardChrome from "@/components/dashboard/DashboardChrome";
 
 export const metadata = {
   title: "Dashboard",
@@ -19,15 +18,5 @@ export default async function DashboardLayout({
   const user = readSessionUser(token);
   if (!user) redirect("/login");
 
-  return (
-    <div className="min-h-screen bg-slate-100 text-slate-900">
-      <div className="flex min-h-screen">
-        <Sidebar />
-        <div className="flex-1 flex flex-col min-w-0">
-          <Topbar user={user} />
-          <main className="flex-1 p-6 lg:p-8">{children}</main>
-        </div>
-      </div>
-    </div>
-  );
+  return <DashboardChrome user={user}>{children}</DashboardChrome>;
 }
