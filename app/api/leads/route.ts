@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSupabaseAdmin } from "@/lib/supabase";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 function str(v: unknown, max = 1000): string | null {
   if (typeof v !== "string") return null;
@@ -53,6 +56,22 @@ export async function POST(req: NextRequest) {
       { status: 500 }
     );
   }
+
+  // Send notification email — fire and forget
+  resend.emails.send({
+    from: "Ocean County Junk Removal <connor@cjresults.com>",
+    to: "connor@cjresults.com",
+    subject: `New lead: ${name} — ${service ?? "General Inquiry"}`,
+    html: `
+      <h2>New Quote Request</h2>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+      <p><strong>Email:</strong> ${email ?? "Not provided"}</p>
+      <p><strong>Town:</strong> ${town ?? "Not provided"}</p>
+      <p><strong>Service:</strong> ${service ?? "Not provided"}</p>
+      <p><strong>Message:</strong> ${message ?? "Not provided"}</p>
+    `,
+  }).catch((err) => console.error("resend error:", err));
 
   return NextResponse.json({ ok: true });
 }
