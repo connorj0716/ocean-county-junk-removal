@@ -55,7 +55,7 @@ export default function Contact() {
               <div>
                 <dt className="text-sm text-slate-500">Based in</dt>
                 <dd className="text-lg font-semibold text-slate-900">
-                  Toms River, Ocean County, NJ
+                  Manahawkin, Ocean County, NJ
                 </dd>
                 <dd className="text-sm text-slate-500">
                   Serving all of Ocean County — mainland &amp; LBI.

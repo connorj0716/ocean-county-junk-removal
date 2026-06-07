@@ -63,7 +63,7 @@ export default function EstimateDocument({
           </div>
           <div className="mt-2 text-sm leading-relaxed">
             <div className="font-semibold">Ocean County Junk Removal</div>
-            <div>Toms River, NJ 08753</div>
+            <div>Manahawkin, NJ 08050</div>
             <div>(609) 703-2115</div>
             <div>info@oceancountyjunkremoval.com</div>
           </div>

@@ -19,9 +19,9 @@ const JSON_LD = {
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Toms River",
+    addressLocality: "Manahawkin",
     addressRegion: "NJ",
-    postalCode: "08753",
+    postalCode: "08050",
     addressCountry: "US",
   },
   areaServed: [
