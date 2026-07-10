@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
 
   try {
     const supabase = getSupabaseAdmin();
-    const { error } = await supabase.from("leads").insert({
+    const { error } = await supabase.from("OCJR - Leads").insert({
       name,
       phone,
       email,
