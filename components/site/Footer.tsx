@@ -34,7 +34,7 @@ export default function Footer() {
         <div>
           <div className="text-sm font-semibold text-white">Contact</div>
           <ul className="mt-3 space-y-2 text-sm">
-            <li><a href="tel:+16097032115" className="hover:text-white">(609) 703-2115</a></li>
+            <li><a href="tel:+16097032115" className="hover:text-white" onClick={() => window.gtag?.("event", "call_click", { event_category: "footer" })}>(609) 703-2115</a></li>
             <li>
               <a href="mailto:info@oceancountyjunkremoval.com" className="hover:text-white">
                 info@oceancountyjunkremoval.com

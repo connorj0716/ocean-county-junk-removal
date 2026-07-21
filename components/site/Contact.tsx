@@ -24,7 +24,7 @@ export default function Contact() {
               <div>
                 <dt className="text-sm text-slate-500">Call or text</dt>
                 <dd className="text-lg font-semibold text-slate-900">
-                  <a href="tel:+16097032115" className="hover:text-brand-600">
+                  <a href="tel:+16097032115" className="hover:text-brand-600" onClick={() => window.gtag?.("event", "call_click", { event_category: "contact" })}>
                     (609) 703-2115
                   </a>
                 </dd>
