@@ -16,7 +16,7 @@ const SERVICES = [
   {
     icon: Sofa,
     title: "Furniture Removal",
-    desc: "Old couch, sectional, mattress, or dining set taking up space? We pick up and remove furniture across Ocean County including condos and high-rises on LBI, Beach Haven and Surf City.",
+    desc: "Old couch, sectional, mattress, or dining set taking up space? We pick up and remove furniture across Ocean County including condos and high rises on LBI, Beach Haven and Surf City.",
   },
   {
     icon: Refrigerator,
@@ -26,12 +26,12 @@ const SERVICES = [
   {
     icon: Home,
     title: "Estate & Home Cleanouts",
-    desc: "Full-home, garage, attic and basement cleanouts in Ocean County. Ideal for estates, downsizing, rental turnovers and pre-sale clearouts in Toms River, Jackson, and Point Pleasant.",
+    desc: "Full home, garage, attic and basement cleanouts in Ocean County. Ideal for estates, downsizing, rental turnovers and pre sale clearouts in Toms River, Jackson, and Point Pleasant.",
   },
   {
     icon: HardHat,
     title: "Construction Debris Removal",
-    desc: "Roofing shingles, drywall, flooring, lumber and renovation debris. Contractor-friendly pickups across Ocean County with flexible scheduling on job sites in LBI, Forked River and Waretown.",
+    desc: "Roofing shingles, drywall, flooring, lumber and renovation debris. Contractor friendly pickups across Ocean County with flexible scheduling on job sites in LBI, Forked River and Waretown.",
   },
   {
     icon: TreePine,

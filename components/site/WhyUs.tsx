@@ -4,17 +4,17 @@ const POINTS = [
   {
     icon: DollarSign,
     title: "Upfront, honest pricing",
-    desc: "Free on-site estimates in Ocean County. We price by volume, not the clock. No surprises when you get the bill.",
+    desc: "Free on site estimates in Ocean County. We price by volume, not the clock. No surprises when you get the bill.",
   },
   {
     icon: Clock,
-    title: "Same-day & next-day pickup",
+    title: "Same day and next day pickup",
     desc: "Most Toms River, Brick and Manahawkin jobs are booked within 24 hours. Call before noon and we'll often come today.",
   },
   {
     icon: ShieldCheck,
     title: "Licensed & fully insured NJ",
-    desc: "Local, insured crews that treat your home and your neighbors right. Condo-board and HOA approved across LBI.",
+    desc: "Local, insured crews that treat your home and your neighbors right. Condo board and HOA approved across LBI.",
   },
   {
     icon: Leaf,
@@ -35,7 +35,7 @@ export default function WhyUs() {
             Local pros. Real prices. Zero hassle.
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Ocean County Junk Removal is owner-operated and based right here on the Jersey Shore. We're not a franchise. When you call, you get a local team that knows the best back roads in Barnegat and the tightest alleyways in Beach Haven.
+            Ocean County Junk Removal is owner operated and based right here on the Jersey Shore. We're not a franchise. When you call, you get a local team that knows the best back roads in Barnegat and the tightest alleyways in Beach Haven.
           </p>
         </div>
 

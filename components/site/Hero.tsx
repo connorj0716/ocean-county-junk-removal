@@ -19,7 +19,7 @@ export default function Hero() {
             Ocean County's <span className="text-brand-400">fastest</span> junk removal service.
           </h1>
           <p className="mt-6 text-lg text-slate-300 max-w-xl">
-            Same-day junk hauling across{" "}
+            Same day junk hauling across{" "}
             <strong className="text-white font-semibold">
               Toms River, Manahawkin, Brick, Lacey, Stafford, Barnegat, and LBI
             </strong>
@@ -71,7 +71,7 @@ export default function Hero() {
             </div>
             <div className="mt-1 text-2xl font-bold">$50 off any cleanout</div>
             <p className="mt-1 text-sm text-slate-300">
-              Book by Sunday and mention the site for $50 off any whole-house, garage, or basement cleanout in Ocean County.
+              Book by Sunday and mention the site for $50 off any whole house, garage, or basement cleanout in Ocean County.
             </p>
             <div className="mt-5 grid grid-cols-2 gap-3">
               {[
