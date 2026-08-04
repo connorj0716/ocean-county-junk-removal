@@ -13,7 +13,6 @@ export default function Contact() {
         <p className="mt-4 text-lg text-slate-600">
           Call us and we will get you a price in minutes. If you would rather text, send us a few photos of what needs to go and we will get right back to you. Most Ocean County jobs are booked within 24 hours.
         </p>
-
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           
             href="tel:+16097032115"
@@ -32,7 +31,6 @@ export default function Contact() {
             Text Us a Photo
           </a>
         </div>
-
         <p className="mt-6 text-sm text-slate-500">
           Mon to Sat 7am to 7pm. Sunday by appointment. We serve all of Ocean County including Manahawkin, Toms River, Brick, LBI, and everywhere in between.
         </p>
