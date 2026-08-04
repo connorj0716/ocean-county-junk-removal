@@ -43,10 +43,9 @@ export default function Hero() {
             >
               Get a Free Quote
             </a>
-            
+            <a
               href="tel:+16097032115"
               onClick={() => window.gtag?.("event", "call_click", { event_category: "hero" })}
-            <a
             >
               <Phone className="h-4 w-4" />
               (609) 703-2115
