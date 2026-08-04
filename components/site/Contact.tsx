@@ -11,7 +11,7 @@ export default function Contact() {
           Ready to clear it out?
         </h2>
         <p className="mt-4 text-lg text-slate-600">
-          Call us and we'll get you a price in minutes. If you'd rather text, send us a few photos of what needs to go and we'll get right back to you. Most Ocean County jobs are booked within 24 hours.
+          Call us and we will get you a price in minutes. If you would rather text, send us a few photos of what needs to go and we will get right back to you. Most Ocean County jobs are booked within 24 hours.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -34,7 +34,7 @@ export default function Contact() {
         </div>
 
         <p className="mt-6 text-sm text-slate-500">
-          Mon–Sat 7am to 7pm. Sunday by appointment. We serve all of Ocean County including Manahawkin, Toms River, Brick, LBI, and everywhere in between.
+          Mon to Sat 7am to 7pm. Sunday by appointment. We serve all of Ocean County including Manahawkin, Toms River, Brick, LBI, and everywhere in between.
         </p>
       </div>
     </section>
