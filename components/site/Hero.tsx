@@ -1,3 +1,5 @@
+"use client";
+
 import { Phone, Star, ShieldCheck, Clock, MapPin } from "lucide-react";
 
 export default function Hero() {
