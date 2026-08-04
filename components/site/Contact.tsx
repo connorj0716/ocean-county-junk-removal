@@ -1,3 +1,5 @@
+"use client";
+
 import { Phone, MessageCircle } from "lucide-react";
 
 export default function Contact() {
