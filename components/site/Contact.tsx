@@ -1,8 +1,10 @@
+import FadeIn from "@/components/FadeIn";
 import { Phone, MessageCircle } from "lucide-react";
 
 export default function Contact() {
   return (
     <section id="contact" className="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50">
+      <FadeIn>
       <div className="container-tight text-center max-w-2xl mx-auto">
         <div className="text-sm font-semibold text-brand-600 uppercase tracking-wide">
           Get a free quote
@@ -27,6 +29,7 @@ export default function Contact() {
           Mon to Sat 7am to 7pm. Sunday by appointment. We serve all of Ocean County including Manahawkin, Toms River, Brick, LBI, and everywhere in between.
         </p>
       </div>
+      </FadeIn>
     </section>
   );
 }

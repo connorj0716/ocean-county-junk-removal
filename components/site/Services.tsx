@@ -1,3 +1,4 @@
+import FadeIn from "@/components/FadeIn";
 import {
   Sofa,
   Refrigerator,
@@ -45,9 +46,11 @@ export default function Services() {
     <section id="services" className="py-20 lg:py-28 bg-slate-50">
       <div className="container-tight">
         <div className="max-w-3xl">
+          <FadeIn>
           <div className="text-sm font-semibold text-brand-600 uppercase tracking-wide">
             What we haul
           </div>
+          </FadeIn>
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
             Full-service junk removal across Ocean County, NJ
           </h2>

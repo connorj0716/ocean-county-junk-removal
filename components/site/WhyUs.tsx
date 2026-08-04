@@ -1,3 +1,4 @@
+import FadeIn from "@/components/FadeIn";
 import { DollarSign, Clock, ShieldCheck, Leaf } from "lucide-react";
 
 const POINTS = [

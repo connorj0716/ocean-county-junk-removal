@@ -1,3 +1,4 @@
+import FadeIn from "@/components/FadeIn";
 import { MapPin } from "lucide-react";
 
 const TOWNS = [
