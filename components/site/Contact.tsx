@@ -1,98 +1,41 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import ContactForm from "@/components/site/ContactForm";
+import { Phone, MessageCircle } from "lucide-react";
 
 export default function Contact() {
   return (
     <section id="contact" className="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50">
-      <div className="container-tight grid lg:grid-cols-2 gap-12">
-        <div>
-          <div className="text-sm font-semibold text-brand-600 uppercase tracking-wide">
-            Get in touch
-          </div>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
-            Free quotes across Ocean County, NJ
-          </h2>
-          <p className="mt-4 text-lg text-slate-600">
-            Tell us what needs to go — a photo helps. Most quotes come back within the hour, and we can often schedule same-day pickup in Toms River, Manahawkin, Brick, Lacey, Stafford, Barnegat, and LBI.
-          </p>
+      <div className="container-tight text-center max-w-2xl mx-auto">
+        <div className="text-sm font-semibold text-brand-600 uppercase tracking-wide">
+          Get a free quote
+        </div>
+        <h2 className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+          Ready to clear it out?
+        </h2>
+        <p className="mt-4 text-lg text-slate-600">
+          Call us and we'll get you a price in minutes. If you'd rather text, send us a few photos of what needs to go and we'll get right back to you. Most Ocean County jobs are booked within 24 hours.
+        </p>
 
-          <dl className="mt-8 space-y-5">
-            <div className="flex items-start gap-4">
-              <div className="h-10 w-10 rounded-lg bg-brand-50 text-brand-600 grid place-items-center shrink-0">
-                <Phone className="h-5 w-5" />
-              </div>
-              <div>
-                <dt className="text-sm text-slate-500">Call or text</dt>
-                <dd className="text-lg font-semibold text-slate-900">
-                  <a href="tel:+16097032115" className="hover:text-brand-600" onClick={() => window.gtag?.("event", "call_click", { event_category: "contact" })}>
-                    (609) 703-2115
-                  </a>
-                </dd>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="h-10 w-10 rounded-lg bg-brand-50 text-brand-600 grid place-items-center shrink-0">
-                <Mail className="h-5 w-5" />
-              </div>
-              <div>
-                <dt className="text-sm text-slate-500">Email</dt>
-                <dd className="text-lg font-semibold text-slate-900">
-                  <a
-                    href="mailto:info@oceancountyjunkremoval.com"
-                    className="hover:text-brand-600"
-                  >
-                    info@oceancountyjunkremoval.com
-                  </a>
-                </dd>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="h-10 w-10 rounded-lg bg-brand-50 text-brand-600 grid place-items-center shrink-0">
-                <MapPin className="h-5 w-5" />
-              </div>
-              <div>
-                <dt className="text-sm text-slate-500">Based in</dt>
-                <dd className="text-lg font-semibold text-slate-900">
-                  Manahawkin, Ocean County, NJ
-                </dd>
-                <dd className="text-sm text-slate-500">
-                  Serving all of Ocean County — mainland &amp; LBI.
-                </dd>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="h-10 w-10 rounded-lg bg-brand-50 text-brand-600 grid place-items-center shrink-0">
-                <Clock className="h-5 w-5" />
-              </div>
-              <div>
-                <dt className="text-sm text-slate-500">Hours</dt>
-                <dd className="text-lg font-semibold text-slate-900">
-                  Mon–Sat: 7am – 7pm
-                </dd>
-                <dd className="text-sm text-slate-500">
-                  Sunday: By appointment
-                </dd>
-              </div>
-            </div>
-          </dl>
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          
+            href="tel:+16097032115"
+            onClick={() => window.gtag?.("event", "call_click", { event_category: "contact" })}
+            className="inline-flex items-center justify-center gap-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-lg px-8 py-4 shadow-lg w-full sm:w-auto"
+          >
+            <Phone className="h-5 w-5" />
+            Call (609) 703-2115
+          </a>
+          
+            href="sms:+16097032115"
+            onClick={() => window.gtag?.("event", "text_click", { event_category: "contact" })}
+            className="inline-flex items-center justify-center gap-3 rounded-xl bg-white hover:bg-slate-50 border-2 border-slate-200 text-slate-900 font-bold text-lg px-8 py-4 shadow-sm w-full sm:w-auto"
+          >
+            <MessageCircle className="h-5 w-5" />
+            Text Us a Photo
+          </a>
         </div>
 
-        <div>
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
-            <h3 className="text-xl font-semibold text-slate-900">
-              Request a free quote
-            </h3>
-            <p className="mt-1 text-sm text-slate-500">
-              We'll text you back within the hour during business hours.
-            </p>
-            <div className="mt-5">
-              <ContactForm />
-            </div>
-          </div>
-        </div>
+        <p className="mt-6 text-sm text-slate-500">
+          Mon–Sat 7am to 7pm. Sunday by appointment. We serve all of Ocean County including Manahawkin, Toms River, Brick, LBI, and everywhere in between.
+        </p>
       </div>
     </section>
   );
