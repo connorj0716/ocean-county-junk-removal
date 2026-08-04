@@ -1,4 +1,3 @@
-cat > /tmp/Hero.tsx << 'ENDOFFILE'
 "use client";
 
 import { Phone, Star, ShieldCheck, Clock, MapPin } from "lucide-react";
