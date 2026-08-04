@@ -37,7 +37,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
-            
+            <a
               href="#contact"
               className="inline-flex items-center justify-center rounded-lg bg-accent-500 hover:bg-accent-600 text-white font-semibold px-6 py-3.5 text-base shadow-lg shadow-accent-600/30 transition-transform hover:scale-105"
             >
@@ -46,7 +46,7 @@ export default function Hero() {
             
               href="tel:+16097032115"
               onClick={() => window.gtag?.("event", "call_click", { event_category: "hero" })}
-              className="inline-flex items-center gap-2 rounded-lg bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold px-6 py-3.5 text-base backdrop-blur transition-transform hover:scale-105"
+            <a
             >
               <Phone className="h-4 w-4" />
               (609) 703-2115
