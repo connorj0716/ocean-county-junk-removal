@@ -1,3 +1,4 @@
+cat > /tmp/Hero.tsx << 'ENDOFFILE'
 "use client";
 
 import { Phone, Star, ShieldCheck, Clock, MapPin } from "lucide-react";
@@ -21,7 +22,7 @@ export default function Hero() {
             Serving all of Ocean County, NJ
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]">
-            Ocean County's <span className="text-brand-400">fastest</span> junk removal service.
+            Ocean County&apos;s <span className="text-brand-400">fastest</span> junk removal service.
           </h1>
           <p className="mt-6 text-lg text-slate-300 max-w-xl">
             Same day junk hauling across{" "}
@@ -51,6 +52,7 @@ export default function Hero() {
               <Phone className="h-4 w-4" />
               (609) 703-2115
             </a>
+          </motion.div>
 
           <motion.dl
             className="mt-10 grid grid-cols-3 gap-5 max-w-lg"
@@ -134,3 +136,6 @@ export default function Hero() {
     </section>
   );
 }
+ENDOFFILE
+echo "File created successfully"
+cat /tmp/Hero.tsx | wc -l
