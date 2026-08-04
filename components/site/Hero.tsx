@@ -135,6 +135,3 @@ export default function Hero() {
     </section>
   );
 }
-ENDOFFILE
-echo "File created successfully"
-cat /tmp/Hero.tsx | wc -l
