@@ -47,7 +47,7 @@ export default function ServiceArea() {
             We haul junk from every town in Ocean County, NJ
           </h2>
           <p className="mt-4 text-lg text-slate-300">
-            From the mainland to the barrier islands — if you're in Ocean County, we're on our way. Here are a few of the towns we serve most:
+            From the mainland to the barrier islands. If you're in Ocean County, we're on our way. Here are a few of the towns we serve most:
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export default function ServiceArea() {
         </div>
 
         <p className="mt-8 text-sm text-slate-400 max-w-3xl">
-          Don't see your town? We also serve Beachwood, Pine Beach, South Toms River, Island Heights, Ocean Gate and the entire Jersey Shore. If it's in Ocean County, call us — we'll be there.
+          Don't see your town? We also serve Beachwood, Pine Beach, South Toms River, Island Heights, Ocean Gate and the entire Jersey Shore. If it's in Ocean County, call us and we will be there.
         </p>
       </div>
     </section>

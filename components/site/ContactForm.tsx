@@ -49,7 +49,7 @@ export default function ContactForm() {
   if (submitted) {
     return (
       <div className="rounded-xl bg-emerald-50 border border-emerald-200 p-5 text-emerald-900">
-        <div className="font-semibold">Thanks — we got your request.</div>
+        <div className="font-semibold">Thanks, we got your request.</div>
         <p className="mt-1 text-sm">
           A member of our Ocean County crew will reach out shortly with pricing and the next available pickup window.
         </p>

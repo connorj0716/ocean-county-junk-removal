@@ -16,7 +16,7 @@ const SERVICES = [
   {
     icon: Sofa,
     title: "Furniture Removal",
-    desc: "Old couch, sectional, mattress, or dining set taking up space? We pick up and remove furniture across Ocean County — including condos and high-rises on LBI, Beach Haven and Surf City.",
+    desc: "Old couch, sectional, mattress, or dining set taking up space? We pick up and remove furniture across Ocean County including condos and high-rises on LBI, Beach Haven and Surf City.",
   },
   {
     icon: Refrigerator,

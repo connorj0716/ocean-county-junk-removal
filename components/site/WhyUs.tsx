@@ -4,7 +4,7 @@ const POINTS = [
   {
     icon: DollarSign,
     title: "Upfront, honest pricing",
-    desc: "Free on-site estimates in Ocean County. We price by volume, not the clock — no surprises when you get the bill.",
+    desc: "Free on-site estimates in Ocean County. We price by volume, not the clock. No surprises when you get the bill.",
   },
   {
     icon: Clock,

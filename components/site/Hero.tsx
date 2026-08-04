@@ -94,7 +94,7 @@ export default function Hero() {
               ))}
             </div>
             <div className="mt-5 text-xs text-slate-400">
-              &amp; every town in Ocean County — from Lakewood to Little Egg Harbor.
+              &amp; every town in Ocean County from Lakewood to Little Egg Harbor.
             </div>
           </div>
         </div>

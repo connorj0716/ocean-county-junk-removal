@@ -18,7 +18,7 @@ export default function Footer() {
             </div>
           </Link>
           <p className="mt-4 text-sm max-w-md">
-            Licensed, insured junk removal serving all of Ocean County, NJ — Toms River, Manahawkin, Brick, Lacey, Stafford, Barnegat, Long Beach Island and beyond. Same-day pickup. Upfront pricing.
+            Licensed, insured junk removal serving all of Ocean County, NJ including Toms River, Manahawkin, Brick, Lacey, Stafford, Barnegat, Long Beach Island and beyond. Same-day pickup. Upfront pricing.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export default function Footer() {
               </a>
             </li>
             <li>Toms River, NJ</li>
-            <li>Mon–Sat: 7am – 7pm</li>
+            <li>Mon to Sat: 7am to 7pm</li>
           </ul>
         </div>
       </div>
