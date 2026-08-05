@@ -16,11 +16,11 @@ export default function Contact() {
           Call us and we will get you a price in minutes. If you would rather text, send us a few photos of what needs to go and we will get right back to you. Most Ocean County jobs are booked within 24 hours.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="tel:+16097032115" className="inline-flex items-center justify-center gap-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-lg px-8 py-4 shadow-lg w-full sm:w-auto">
+          <a href="tel:+16093845223" className="inline-flex items-center justify-center gap-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-lg px-8 py-4 shadow-lg w-full sm:w-auto">
             <Phone className="h-5 w-5" />
-            Call (609) 703-2115
+            Call (609) 384-5223
           </a>
-          <a href="sms:+16097032115" className="inline-flex items-center justify-center gap-3 rounded-xl bg-white hover:bg-slate-50 border-2 border-slate-200 text-slate-900 font-bold text-lg px-8 py-4 shadow-sm w-full sm:w-auto">
+          <a href="sms:+16093845223" className="inline-flex items-center justify-center gap-3 rounded-xl bg-white hover:bg-slate-50 border-2 border-slate-200 text-slate-900 font-bold text-lg px-8 py-4 shadow-sm w-full sm:w-auto">
             <MessageCircle className="h-5 w-5" />
             Text Us a Photo
           </a>

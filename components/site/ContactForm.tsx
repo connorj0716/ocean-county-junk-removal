@@ -35,13 +35,13 @@ export default function ContactForm() {
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.ok) {
-        setError(data?.error ?? "Something went wrong. Please call us at (609) 703-2115.");
+        setError(data?.error ?? "Something went wrong. Please call us at (609) 384-5223.");
         setLoading(false);
         return;
       }
       setSubmitted(true);
     } catch {
-      setError("Network error. Please call us at (609) 703-2115.");
+      setError("Network error. Please call us at (609) 384-5223.");
       setLoading(false);
     }
   }
@@ -82,7 +82,7 @@ export default function ContactForm() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             className="w-full rounded-lg border border-slate-300 px-3.5 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
-            placeholder="(609) 703-2115"
+            placeholder="(609) 384-5223"
           />
         </div>
       </div>

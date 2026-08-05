@@ -14,7 +14,7 @@ const JSON_LD = {
   description:
     "Full-service junk removal company serving all of Ocean County, NJ — including Toms River, Manahawkin, Brick, Lacey, Stafford, Barnegat and Long Beach Island. Same-day junk hauling, furniture removal, appliance removal, estate cleanouts and construction debris.",
   url: "https://oceancountyjunkremoval.com",
-  telephone: "+1-609-703-2115",
+  telephone: "+1-609-384-5223",
   image: "https://oceancountyjunkremoval.com/og.jpg",
   priceRange: "$$",
   address: {
