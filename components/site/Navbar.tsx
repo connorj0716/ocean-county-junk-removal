@@ -12,11 +12,11 @@ export default function Navbar() {
             <Truck className="h-5 w-5" />
           </div>
           <div className="leading-tight">
-            <div className="text-sm font-bold text-slate-900">Ocean County</div>
-            <div className="text-xs text-slate-500">Junk Removal</div>
+            <div className="text-sm font-bold text-white">Ocean County</div>
+            <div className="text-xs text-white/80">Junk Removal</div>
           </div>
         </Link>
-        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700">
+        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-white">
           <a href="#services" className="hover:text-orange-400">Services</a>
           <a href="#areas" className="hover:text-orange-400">Service Area</a>
           <a href="#why" className="hover:text-orange-400">Why Us</a>
