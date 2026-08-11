@@ -39,7 +39,7 @@ export default function Hero() {
             <a
               href="tel:+16093845223"
               onClick={() => window.gtag?.("event", "call_click", { event_category: "hero" })}
-              className="inline-flex items-center gap-2 rounded-lg bg-[#08184f] hover:bg-[#050f35] border border-white/20 text-white font-semibold px-6 py-3.5 text-base transition-transform hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-lg bg-white hover:bg-slate-100 text-[#0f2580] font-semibold px-6 py-3.5 text-base transition-transform hover:scale-105"
             >
               <Phone className="h-4 w-4" />
               (609) 384-5223
