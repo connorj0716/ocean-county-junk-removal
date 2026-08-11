@@ -20,6 +20,28 @@ export default function Hero() {
             <MapPin className="h-3.5 w-3.5 text-brand-300" />
             Serving all of Ocean County, NJ
           </div>
+          <div className="mb-4">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* White shadow arrow */}
+              <path
+                d="M30 5 C10 5, 5 25, 20 35 C10 35, 8 45, 20 52 L16 48 M20 52 L26 44"
+                stroke="white"
+                strokeWidth="7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
+              />
+              {/* Orange arrow on top */}
+              <path
+                d="M30 5 C10 5, 5 25, 20 35 C10 35, 8 45, 20 52 L16 48 M20 52 L26 44"
+                stroke="#f47820"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
+              />
+            </svg>
+          </div>
           <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight leading-[1.1] drop-shadow-[2px_3px_4px_rgba(0,0,0,0.7)]">
             Ocean County&apos;s<br /><span className="text-[#f47820] drop-shadow-[3px_4px_6px_rgba(0,0,0,0.9)]">fastest</span> junk<br />removal service.
           </h1>
