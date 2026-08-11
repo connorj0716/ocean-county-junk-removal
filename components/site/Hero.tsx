@@ -10,7 +10,7 @@ export default function Hero() {
         aria-hidden
         className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_20%_20%,rgba(0,162,240,0.25),transparent_45%),radial-gradient(circle_at_85%_30%,rgba(255,122,26,0.18),transparent_50%)]"
       />
-      <div className="container-tight relative py-20 lg:py-28 grid lg:grid-cols-2 gap-32 items-center">
+      <div className="container-tight relative py-20 lg:py-28 flex flex-col gap-16 items-start">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -20,7 +20,7 @@ export default function Hero() {
             <MapPin className="h-3.5 w-3.5 text-brand-300" />
             Serving all of Ocean County, NJ
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] drop-shadow-[2px_3px_4px_rgba(0,0,0,0.7)]">
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.1] drop-shadow-[2px_3px_4px_rgba(0,0,0,0.7)]">
             Ocean County&apos;s<br /><span className="text-[#f47820] drop-shadow-[3px_4px_6px_rgba(0,0,0,0.9)]">fastest</span> junk<br />removal service.
           </h1>
 
