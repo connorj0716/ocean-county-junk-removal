@@ -21,7 +21,7 @@ export default function Hero() {
             Serving all of Ocean County, NJ
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]">
-            Ocean County&apos;s <span className="text-[#f47820]">fastest</span> junk removal service.
+            Ocean County&apos;s <span className="text-[#f47820] drop-shadow-[0_2px_8px_rgba(244,120,32,0.8)]">fastest</span> junk removal service.
           </h1>
           <p className="mt-6 text-lg text-slate-300 max-w-xl">
             Same day junk hauling across{" "}
