@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+    <section className="relative overflow-hidden bg-gradient-to-b from-sky-600 via-sky-500 to-sky-600 text-white">
       <div
         aria-hidden
         className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_20%_20%,rgba(0,162,240,0.25),transparent_45%),radial-gradient(circle_at_85%_30%,rgba(255,122,26,0.18),transparent_50%)]"
@@ -21,7 +21,7 @@ export default function Hero() {
             Serving all of Ocean County, NJ
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]">
-            Ocean County&apos;s <span className="text-brand-400">fastest</span> junk removal service.
+            Ocean County&apos;s <span className="text-orange-400">fastest</span> junk removal service.
           </h1>
           <p className="mt-6 text-lg text-slate-300 max-w-xl">
             Same day junk hauling across{" "}
