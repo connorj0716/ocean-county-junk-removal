@@ -25,9 +25,6 @@ export default function Contact() {
             Text Us a Photo
           </a>
         </div>
-        <p className="mt-6 text-sm text-slate-500">
-          Mon to Sat 7am to 7pm. Sunday by appointment. We serve all of Ocean County including Manahawkin, Toms River, Brick, LBI, and everywhere in between.
-        </p>
       </div>
       </FadeIn>
     </section>
