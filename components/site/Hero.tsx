@@ -10,7 +10,7 @@ export default function Hero() {
         aria-hidden
         className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_20%_20%,rgba(0,162,240,0.25),transparent_45%),radial-gradient(circle_at_85%_30%,rgba(255,122,26,0.18),transparent_50%)]"
       />
-      <div className="container-tight relative py-20 lg:py-28 grid lg:grid-cols-2 gap-20 items-center">
+      <div className="container-tight relative py-20 lg:py-28 grid lg:grid-cols-2 gap-32 items-center">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
