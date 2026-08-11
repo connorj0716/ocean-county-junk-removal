@@ -45,7 +45,7 @@ export default function ServiceArea() {
             Service Area
           </div>
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight">
-            We haul junk from every town in Ocean County, NJ
+            Every Town in Ocean County, NJ
           </h2>
           <p className="mt-4 text-lg text-slate-300">
             From the mainland to the barrier islands. If you're in Ocean County, we're on our way. Here are a few of the towns we serve most:
