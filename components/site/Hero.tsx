@@ -20,22 +20,22 @@ export default function Hero() {
             <MapPin className="h-3.5 w-3.5 text-brand-300" />
             Serving all of Ocean County, NJ
           </div>
-          <div className="mb-4">
-            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* White shadow arrow */}
+          <div className="relative mb-2 h-24 w-48">
+            <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-0 left-8 w-48 h-24">
+              {/* White shadow */}
               <path
-                d="M30 5 C10 5, 5 25, 20 35 C10 35, 8 45, 20 52 L16 48 M20 52 L26 44"
+                d="M160 8 C140 8, 60 10, 30 55 C25 63, 22 75, 28 88 M28 88 L18 76 M28 88 L40 80"
                 stroke="white"
-                strokeWidth="7"
+                strokeWidth="6"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 fill="none"
               />
-              {/* Orange arrow on top */}
+              {/* Orange arrow */}
               <path
-                d="M30 5 C10 5, 5 25, 20 35 C10 35, 8 45, 20 52 L16 48 M20 52 L26 44"
+                d="M160 8 C140 8, 60 10, 30 55 C25 63, 22 75, 28 88 M28 88 L18 76 M28 88 L40 80"
                 stroke="#f47820"
-                strokeWidth="4"
+                strokeWidth="3.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 fill="none"
