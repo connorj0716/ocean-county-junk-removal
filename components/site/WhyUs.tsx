@@ -14,8 +14,8 @@ const POINTS = [
   },
   {
     icon: ShieldCheck,
-    title: "Licensed & fully insured NJ",
-    desc: "Local, insured crews that treat your home and your neighbors right. Condo board and HOA approved across LBI.",
+    title: "We show up and get it done",
+    desc: "No ghosting, no no-shows. When you book with us, we arrive on time, work clean, and leave your property looking better than we found it.",
   },
   {
     icon: Leaf,
