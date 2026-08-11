@@ -20,7 +20,7 @@ export default function Hero() {
             <MapPin className="h-3.5 w-3.5 text-brand-300" />
             Serving all of Ocean County, NJ
           </div>
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.15] drop-shadow-[2px_3px_4px_rgba(0,0,0,0.7)]">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.15] drop-shadow-[2px_3px_4px_rgba(0,0,0,0.7)]">
             Ocean County&apos;s <span className="text-[#f47820] drop-shadow-[3px_4px_6px_rgba(0,0,0,0.9)]">fastest</span> junk removal service.
           </h1>
 
