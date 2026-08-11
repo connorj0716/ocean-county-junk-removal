@@ -24,6 +24,7 @@ export default function Hero() {
             Ocean County&apos;s<br /><span className="text-[#f47820] drop-shadow-[3px_4px_6px_rgba(0,0,0,0.9)]">fastest</span> junk<br />removal service.
           </h1>
 
+          <p className="mt-4 text-lg text-white/80 max-w-lg">Serving any and all junk removal projects throughout Ocean County, NJ.</p>
           <motion.div
             className="mt-10 flex flex-wrap items-center gap-3"
             initial={{ opacity: 0, y: 16 }}
