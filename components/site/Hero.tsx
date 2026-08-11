@@ -20,7 +20,7 @@ export default function Hero() {
             <MapPin className="h-3.5 w-3.5 text-brand-300" />
             Serving all of Ocean County, NJ
           </div>
-          <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight leading-[1.1] drop-shadow-[2px_3px_4px_rgba(0,0,0,0.7)]">
+          <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight leading-[1.1] drop-shadow-[2px_3px_6px_rgba(0,0,0,0.95)]">
             Ocean County&apos;s<br /><span className="text-[#f47820] drop-shadow-[3px_4px_6px_rgba(0,0,0,0.9)]">fastest</span> junk<br />removal service.
           </h1>
 
@@ -39,7 +39,7 @@ export default function Hero() {
             <a
               href="tel:+16093845223"
               onClick={() => window.gtag?.("event", "call_click", { event_category: "hero" })}
-              className="inline-flex items-center gap-2 rounded-lg bg-white hover:bg-slate-100 text-black font-semibold px-6 py-3.5 text-base transition-transform hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-lg bg-[#0f2580] hover:bg-[#08184f] border border-white/20 text-white font-semibold px-6 py-3.5 text-base transition-transform hover:scale-105"
             >
               <Phone className="h-4 w-4" />
               (609) 384-5223
