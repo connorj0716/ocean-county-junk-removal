@@ -32,7 +32,7 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-lg bg-accent-500 hover:bg-accent-600 text-white font-semibold px-6 py-3.5 text-base shadow-lg shadow-accent-600/30 transition-transform hover:scale-105"
+              className="inline-flex items-center justify-center rounded-lg bg-[#b54e0a] hover:bg-[#9a4008] text-white font-semibold px-6 py-3.5 text-base shadow-lg transition-transform hover:scale-105"
             >
               Get a Free Quote
             </a>
