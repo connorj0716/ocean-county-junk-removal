@@ -22,7 +22,7 @@ export default function Navbar() {
           <a href="#why" className="hover:text-brand-600">Why Us</a>
           <a href="#contact" className="hover:text-brand-600">Contact</a>
         </nav>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <a
             href="tel:+16093845223" onClick={() => window.gtag?.("event", "call_click", { event_category: "navbar" })}
             className="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-slate-900 hover:text-brand-600"
