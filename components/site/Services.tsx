@@ -52,7 +52,7 @@ export default function Services() {
           </div>
           </FadeIn>
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
-            Full-service junk removal across Ocean County, NJ
+            Ocean County Junk Removal
           </h2>
           <p className="mt-4 text-lg text-slate-600">
             Whether you're clearing out a beach house on Long Beach Island or gutting a garage in Toms River, Ocean County Junk Removal gives you one call, one crew, and one upfront price.
