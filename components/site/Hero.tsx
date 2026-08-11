@@ -89,7 +89,7 @@ export default function Hero() {
           <img
             src="/truck.jpg"
             alt="Ocean County Junk Removal truck"
-            className="rounded-2xl shadow-2xl w-full object-cover"
+            className="rounded-2xl shadow-2xl w-full object-cover scale-105"
           />
         </motion.div>
       </div>
