@@ -5,7 +5,7 @@ import { Phone, Truck } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-40 bg-[#060f2e] border-b border-blue-900">
+    <header className="sticky top-0 z-40 bg-[#030a1f] border-b border-blue-900">
       <div className="container-tight flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5">
           <div className="h-9 w-9 rounded-lg bg-gradient-to-br from-brand-500 to-brand-800 grid place-items-center text-white">
