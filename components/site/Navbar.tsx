@@ -12,8 +12,8 @@ export default function Navbar() {
             <Truck className="h-5 w-5" />
           </div>
           <div className="leading-tight">
-            <div className="text-sm font-bold text-white uppercase tracking-wide">Ocean County</div>
-            <div className="text-sm font-bold text-[#f47820] uppercase tracking-wide">Junk Removal</div>
+            <div className="text-base font-black text-white uppercase tracking-wide">Ocean County</div>
+            <div className="text-base font-black text-[#f47820] uppercase tracking-wide">Junk Removal</div>
           </div>
         </Link>
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-white">
