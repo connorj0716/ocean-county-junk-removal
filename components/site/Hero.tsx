@@ -46,31 +46,6 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <motion.dl
-            className="mt-12 grid grid-cols-3 gap-8 max-w-lg"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <div>
-              <dt className="flex items-center gap-1.5 text-xs text-slate-400">
-                <Star className="h-3.5 w-3.5 text-amber-400" /> 5.0 Google
-              </dt>
-              <dd className="mt-1 text-sm font-semibold">200+ 5-star reviews</dd>
-            </div>
-            <div>
-              <dt className="flex items-center gap-1.5 text-xs text-slate-400">
-                <ShieldCheck className="h-3.5 w-3.5 text-brand-300" /> Licensed
-              </dt>
-              <dd className="mt-1 text-sm font-semibold">Fully insured NJ</dd>
-            </div>
-            <div>
-              <dt className="flex items-center gap-1.5 text-xs text-slate-400">
-                <Clock className="h-3.5 w-3.5 text-emerald-300" /> Same day
-              </dt>
-              <dd className="mt-1 text-sm font-semibold">Pickup available</dd>
-            </div>
-          </motion.dl>
         </motion.div>
 
         <motion.div
