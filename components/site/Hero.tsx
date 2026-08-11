@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#0f2580] text-white min-h-screen flex items-center">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#0f2580] via-[#1a3fd4] to-[#f47820] text-white min-h-screen flex items-center">
       <div
         aria-hidden
         className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_20%_20%,rgba(0,162,240,0.25),transparent_45%),radial-gradient(circle_at_85%_30%,rgba(255,122,26,0.18),transparent_50%)]"
