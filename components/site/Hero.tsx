@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden text-white min-h-screen flex items-center" style={{ background: "linear-gradient(135deg, #08184f 0%, #0f2580 40%, #c45e0a 70%, #a34a05 100%)" }}>
+    <section className="relative overflow-hidden text-white min-h-screen flex items-center" style={{ background: "linear-gradient(135deg, #08184f 0%, #0f2580 37%, #c45e0a 67%, #a34a05 100%)" }}>
       <div
         aria-hidden
         className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_20%_20%,rgba(0,162,240,0.25),transparent_45%),radial-gradient(circle_at_85%_30%,rgba(255,122,26,0.18),transparent_50%)]"
@@ -39,7 +39,7 @@ export default function Hero() {
             <a
               href="tel:+16093845223"
               onClick={() => window.gtag?.("event", "call_click", { event_category: "hero" })}
-              className="inline-flex items-center gap-2 rounded-lg bg-[#0f2580] hover:bg-[#08184f] border border-white/20 text-white font-semibold px-6 py-3.5 text-base transition-transform hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-lg bg-[#08184f] hover:bg-[#050f35] border border-white/20 text-white font-semibold px-6 py-3.5 text-base transition-transform hover:scale-105"
             >
               <Phone className="h-4 w-4" />
               (609) 384-5223
