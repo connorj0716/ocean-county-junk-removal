@@ -23,13 +23,6 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]">
             Ocean County&apos;s <span className="text-[#f47820] drop-shadow-[0_2px_8px_rgba(244,120,32,0.8)]">fastest</span> junk removal service.
           </h1>
-          <p className="mt-6 text-lg text-slate-300 max-w-xl">
-            Same day junk hauling across{" "}
-            <strong className="text-white font-semibold">
-              Toms River, Manahawkin, Brick, Lacey, Stafford, Barnegat, and LBI
-            </strong>
-            . Upfront pricing. Fully insured crews. No hidden fees. We load it, we haul it, we dispose of it. You relax.
-          </p>
 
           <motion.div
             className="mt-8 flex flex-wrap items-center gap-3"
@@ -46,7 +39,7 @@ export default function Hero() {
             <a
               href="tel:+16093845223"
               onClick={() => window.gtag?.("event", "call_click", { event_category: "hero" })}
-              className="inline-flex items-center gap-2 rounded-lg bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold px-6 py-3.5 text-base backdrop-blur transition-transform hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-lg bg-white hover:bg-slate-100 text-black font-semibold px-6 py-3.5 text-base transition-transform hover:scale-105"
             >
               <Phone className="h-4 w-4" />
               (609) 384-5223
