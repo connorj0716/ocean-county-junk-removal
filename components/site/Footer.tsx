@@ -50,7 +50,7 @@ export default function Footer() {
       <div className="border-t border-slate-900 py-5 text-xs text-slate-500">
         <div className="container-tight relative flex items-center justify-between">
           <div>&copy; {new Date().getFullYear()} Ocean County Junk Removal. Serving Ocean County, NJ.</div>
-          <div className="absolute left-1/2 -translate-x-1/2 text-slate-500">Powered by <a href="https://cjresults.com" target="_blank" rel="noopener noreferrer" className="text-[#4d9ef5] hover:text-[#74b4f8]">CJResults</a></div>
+          <div className="absolute left-[55%] -translate-x-1/2 text-slate-500">Powered by <a href="https://cjresults.com" target="_blank" rel="noopener noreferrer" className="text-[#4d9ef5] hover:text-[#74b4f8]">CJResults</a></div>
           <div>
             <Link href="/login" className="hover:text-slate-300">Staff Login</Link>
           </div>
