@@ -6,7 +6,7 @@ import { Phone, Truck } from "lucide-react";
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 bg-[#030a1f] border-b border-blue-900">
-      <div className="container-tight flex h-16 items-center justify-between">
+      <div className="container-tight flex h-16 items-center justify-between relative">
         <Link href="/" className="flex items-center gap-2.5">
           <div className="h-9 w-9 rounded-lg bg-gradient-to-br from-brand-500 to-brand-800 grid place-items-center text-white">
             <Truck className="h-5 w-5" />
@@ -16,7 +16,7 @@ export default function Navbar() {
             <div className="text-sm font-black text-[#f47820] uppercase tracking-wide">Junk Removal</div>
           </div>
         </Link>
-        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-white">
+        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-white absolute left-1/2 -translate-x-1/2">
           <a href="#services" className="hover:text-orange-400">Services</a>
           <a href="#areas" className="hover:text-orange-400">Service Area</a>
           <a href="#why" className="hover:text-orange-400">Why Us</a>
