@@ -20,7 +20,7 @@ export default function Contact() {
             <Phone className="h-5 w-5" />
             Call (609) 384-5223
           </a>
-          <a href="sms:+16093845223" className="inline-flex items-center justify-center gap-3 rounded-xl bg-white hover:bg-slate-50 border-2 border-slate-200 text-slate-900 font-bold text-lg px-8 py-4 shadow-sm w-full sm:w-auto">
+          <a href="sms:+16093845223" className="inline-flex items-center justify-center gap-3 rounded-xl bg-[#f47820] hover:bg-[#d4600f] text-white font-bold text-lg px-8 py-4 shadow-sm w-full sm:w-auto">
             <MessageCircle className="h-5 w-5" />
             Text Us a Photo
           </a>
