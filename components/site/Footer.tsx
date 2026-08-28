@@ -6,7 +6,7 @@ import { Truck } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 border-t border-slate-900">
-      <div className="container-tight py-14 grid md:grid-cols-4 gap-10">
+      <div className="container-tight py-14 grid md:grid-cols-5 gap-10">
         <div className="md:col-span-2">
           <Link href="/" className="flex items-center gap-2.5">
             <div className="h-9 w-9 rounded-lg bg-gradient-to-br from-brand-500 to-brand-800 grid place-items-center text-white">
@@ -30,6 +30,16 @@ export default function Footer() {
             <li><a href="#services" className="hover:text-white">Appliance Removal</a></li>
             <li><a href="#services" className="hover:text-white">Estate Cleanouts</a></li>
             <li><a href="#services" className="hover:text-white">Construction Debris</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div className="text-sm font-semibold text-white">Service Areas</div>
+          <ul className="mt-3 space-y-2 text-sm">
+            <li><Link href="/toms-river" className="hover:text-white">Toms River</Link></li>
+            <li><Link href="/barnegat" className="hover:text-white">Barnegat</Link></li>
+            <li><Link href="/ocean-acres" className="hover:text-white">Ocean Acres</Link></li>
+            <li><Link href="/little-egg-harbor" className="hover:text-white">Little Egg Harbor</Link></li>
           </ul>
         </div>
 
