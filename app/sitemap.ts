@@ -8,7 +8,10 @@ const routes: Array<{
   path: string;
   changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
   priority: number;
-}> = [{ path: "/", changeFrequency: "weekly", priority: 1 }];
+}> = [
+  { path: "/", changeFrequency: "weekly", priority: 1 },
+  { path: "/barnegat", changeFrequency: "monthly", priority: 0.8 },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
