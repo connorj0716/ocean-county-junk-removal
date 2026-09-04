@@ -1,7 +1,7 @@
 import Navbar from "@/components/site/Navbar";
 import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
-import FadeIn from "@/components/FadeIn";
+import FadeIn, { SlideIn } from "@/components/FadeIn";
 import {
   Sofa,
   Refrigerator,
@@ -85,33 +85,43 @@ export default function LocationPage({
           aria-hidden
           className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_20%_20%,rgba(0,162,240,0.25),transparent_45%),radial-gradient(circle_at_85%_30%,rgba(255,122,26,0.18),transparent_50%)]"
         />
-        <div className="container-tight relative py-20 lg:py-28 max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/15 px-3 py-1 text-xs font-medium mb-8">
-            <MapPin className="h-3.5 w-3.5 text-brand-300" />
-            {badge}
+        <div className="container-tight relative py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/15 px-3 py-1 text-xs font-medium mb-8">
+              <MapPin className="h-3.5 w-3.5 text-brand-300" />
+              {badge}
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.1] drop-shadow-[2px_3px_6px_rgba(0,0,0,0.95)]">
+              Junk Removal in{" "}
+              <span className="text-[#f47820] drop-shadow-[3px_4px_6px_rgba(0,0,0,0.9)]">
+                {town}, NJ
+              </span>
+            </h1>
+            <p className="mt-6 text-lg text-white/80">{intro}</p>
+            <div className="mt-10 flex flex-wrap items-center gap-3">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-lg bg-[#d4600f] hover:bg-[#b54e0a] text-white font-semibold px-6 py-3.5 text-base shadow-lg transition-transform hover:scale-105"
+              >
+                Get a Free Quote
+              </a>
+              <a
+                href="tel:+16093845223"
+                className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 text-white font-semibold px-6 py-3.5 text-base"
+              >
+                <Phone className="h-4 w-4" />
+                (609) 384-5223
+              </a>
+            </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-[1.1] drop-shadow-[2px_3px_6px_rgba(0,0,0,0.95)]">
-            Junk Removal in{" "}
-            <span className="text-[#f47820] drop-shadow-[3px_4px_6px_rgba(0,0,0,0.9)]">
-              {town}, NJ
-            </span>
-          </h1>
-          <p className="mt-6 text-lg text-white/80">{intro}</p>
-          <div className="mt-10 flex flex-wrap items-center gap-3">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center rounded-lg bg-[#d4600f] hover:bg-[#b54e0a] text-white font-semibold px-6 py-3.5 text-base shadow-lg transition-transform hover:scale-105"
-            >
-              Get a Free Quote
-            </a>
-            <a
-              href="tel:+16093845223"
-              className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 hover:bg-white/10 text-white font-semibold px-6 py-3.5 text-base"
-            >
-              <Phone className="h-4 w-4" />
-              (609) 384-5223
-            </a>
-          </div>
+
+          <SlideIn direction="right" className="relative">
+            <img
+              src="/truck.jpg"
+              alt="Ocean County Junk Removal truck"
+              className="rounded-2xl shadow-2xl w-full object-cover scale-125"
+            />
+          </SlideIn>
         </div>
       </section>
 
