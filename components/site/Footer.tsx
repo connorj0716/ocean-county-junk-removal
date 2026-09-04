@@ -35,11 +35,29 @@ export default function Footer() {
 
         <div>
           <div className="text-sm font-semibold text-white">Service Areas</div>
-          <ul className="mt-3 space-y-2 text-sm">
+          <ul className="mt-3 space-y-2 text-sm columns-2 gap-6">
             <li><Link href="/toms-river" className="hover:text-white">Toms River</Link></li>
             <li><Link href="/barnegat" className="hover:text-white">Barnegat</Link></li>
             <li><Link href="/ocean-acres" className="hover:text-white">Ocean Acres</Link></li>
             <li><Link href="/little-egg-harbor" className="hover:text-white">Little Egg Harbor</Link></li>
+            <li><Link href="/long-beach-island" className="hover:text-white">Long Beach Island</Link></li>
+            <li><Link href="/manahawkin" className="hover:text-white">Manahawkin</Link></li>
+            <li><Link href="/stafford-township" className="hover:text-white">Stafford Township</Link></li>
+            <li><Link href="/waretown" className="hover:text-white">Waretown</Link></li>
+            <li><Link href="/west-creek" className="hover:text-white">West Creek</Link></li>
+            <li><Link href="/lacey-township" className="hover:text-white">Lacey / Forked River</Link></li>
+            <li><Link href="/brick" className="hover:text-white">Brick</Link></li>
+            <li><Link href="/jackson" className="hover:text-white">Jackson</Link></li>
+            <li><Link href="/lakewood" className="hover:text-white">Lakewood</Link></li>
+            <li><Link href="/point-pleasant" className="hover:text-white">Point Pleasant</Link></li>
+            <li><Link href="/seaside-heights" className="hover:text-white">Seaside Heights</Link></li>
+            <li><Link href="/seaside-park" className="hover:text-white">Seaside Park</Link></li>
+            <li><Link href="/lavallette" className="hover:text-white">Lavallette</Link></li>
+            <li><Link href="/beachwood" className="hover:text-white">Beachwood</Link></li>
+            <li><Link href="/pine-beach" className="hover:text-white">Pine Beach</Link></li>
+            <li><Link href="/island-heights" className="hover:text-white">Island Heights</Link></li>
+            <li><Link href="/ocean-gate" className="hover:text-white">Ocean Gate</Link></li>
+            <li><Link href="/south-toms-river" className="hover:text-white">South Toms River</Link></li>
           </ul>
         </div>
 
